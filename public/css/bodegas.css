@@ -1,0 +1,54 @@
+.bodegas-container {
+    width: 100%;
+    min-height: calc(100vh - 96px);
+    background-color: #d1d1d1;
+}
+
+.bodega-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 18vh;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+}
+
+.winery-name {
+    color: white;
+}
+
+.bodega-item:hover {
+    background-size: 120%;
+}
+
+.marale {
+    background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(/img/bodegas/banner/marale-banner.jpg);
+    background-size: 100%;
+    background-position: 90% 44%;
+}
+
+.merced {
+    background: linear-gradient(rgba(0, 0, 0, 0.38), rgba(0, 0, 0, 0.18)), url(/img/bodegas/banner/merced-del-estero.jpg);
+    background-size: 100%;
+    background-position: 50% 55%;
+}
+
+.fabril {
+    background: linear-gradient(rgba(0, 0, 0, 0.38), rgba(0, 0, 0, 0.18)), url(/img/bodegas/banner/fabril.jpg);
+    background-size: 100%;
+    background-position: 50% 52%;
+}
+
+.sierras {
+    background: linear-gradient(rgba(0, 0, 0, 0.38), rgba(0, 0, 0, 0.18)), url(/img/bodegas/banner/sierras.jpg);
+    background-size: 100%;
+    background-position: 50% 52%;
+}
+
+.viñas {
+    background: linear-gradient(rgba(0, 0, 0, 0.38), rgba(0, 0, 0, 0.18)), url(/img/bodegas/banner/viñas.jpg);
+    background-size: 100%;
+    background-position: 50% 52%;
+}

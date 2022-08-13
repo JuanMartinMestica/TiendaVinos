@@ -1,0 +1,61 @@
+<div class="sign-up-container">
+    <div>
+        <div class="form-container">
+            <h1 class="login-title">¡Inicia Sesión o Registrate para realizar las compras que desees!</h1>
+
+
+            <form action="/auth/login" method="post" class="form-login">
+                <div class="input-group">
+                    <input required type="email" name="mail" autocomplete="off" id="mail" class="input">
+                    <label class="user-label">Email</label>
+                </div>
+                <div class="input-group">
+                    <input required type="password" name="contraseña" autocomplete="off" id="contraseña" class="input">
+                    <label class="user-label">Contraseña</label>
+                </div>
+
+                <button type="submit" class="button-add-cart login-btn" ">
+                        <span class="button-content-cart login-span ">Ingresar</span>
+                    </button>
+    
+                    <a class="forgot-password " href=" ">¿Olvidaste tu contraseña?</a>
+    
+    
+             
+                    <p class="login-description "> o </p>
+    
+    
+                </form>
+    
+                <!-- LOGIN WITH GOOGLE -->
+                <button class="button-add-cart ">
+                    <span class="button-content-cart btn-content-login ">  <img src="/img/favicon/google-icon.png " class="icon-login "> Login con Google</span>
+                </button>
+    
+    
+                <!-- REGISTER WITH MAIL -->
+                <a href="/auth/registro ">
+                    <button class="button-add-cart ">
+                    <span class="button-content-cart btn-content-login ">  <i class='bx bx-envelope icon-mail icon-login'></i>  Registrarse con Mail</span>
+                </button>
+                </a>
+    
+            </div>
+    </div>
+    <div class="wine-waves-container ">
+            <div>
+                <svg class="waves " xmlns="http://www.w3.org/2000/svg " xmlns:xlink="http://www.w3.org/1999/xlink " viewBox="0 24 150 28 " preserveAspectRatio="none " shape-rendering="auto ">
+                        <defs>
+                        <path id="gentle-wave " d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z " />
+                        </defs>
+                        <g class="parallax ">
+                            <use xlink:href="#gentle-wave " x="48 " y="0 " fill="rgba(109,0,0,0.7 " />
+                            <use xlink:href="#gentle-wave " x="48 " y="3 " fill="rgba(153,0,0,0.5) " />
+                            <use xlink:href="#gentle-wave " x="48 " y="5 " fill="rgba(88,0,0,0.3) " />
+                            <use xlink:href="#gentle-wave " x="48 " y="7 " fill="rgba(88,0,0,1) " />
+                        </g>
+                        </svg>
+            </div>
+    </div>
+
+</div>

@@ -1,0 +1,93 @@
+<div class="wrapper">
+
+    <div class="main-container">
+        <div class="row">
+            <div class="left">
+                <div class="main-title">
+                    <h1 class="title">La tienda de vinos</h1>
+                    <p class="main-desc">Explora nuestra tienda de vinos y productos, ¡Animate a probar las mejores bodegas, vinos y productos de la región! </p>
+                </div>
+                <div class="btn-container">
+                    <a href="/bodegas" class="btn-dark">Conocé las bodegas</a>
+                    <a href="/tienda" class="btn-light">Conocé la tienda</a>
+                </div>
+            </div>
+            <div class="right">
+                <img src="/img/landing/mainimg.png" class="main-img" alt="imagen de copa de vino">
+            </div>
+        </div>
+        <div class="category-cards">
+            <a href="/bodegas/Marale" class="region-card">
+                <div class="img">
+                    <img src="/img/bodegas/Marale.jpg" class="region-img" alt="" srcset="">
+                </div>
+                <div class="name">
+                    <p>Marale</p>
+                </div>
+            </a>
+            <a href="/bodegas/Merced" class="region-card">
+                <div class="img">
+                    <img src="/img/bodegas/Merced.jpg" class="region-img" alt="" srcset="">
+                </div>
+                <div class="name">
+                    <p>Merced del Estero</p>
+                </div>
+            </a>
+            <a href="/bodegas/Fabril" class="region-card">
+                <div class="img">
+                    <img src="/img/bodegas/Fabril.jpg" class="region-img" alt="" srcset="">
+                </div>
+                <div class="name">
+                    <p>Fabril Alto Verde</p>
+                </div>
+            </a>
+            <a href="/bodegas/Sierras" class="region-card">
+                <div class="img">
+                    <img src="/img/bodegas/Sierras.jpg" class="region-img" alt="" srcset="">
+                </div>
+                <div class="name">
+                    <p>Sierras Azules</p>
+                </div>
+            </a>
+            <a href="/bodegas/Viñas" class="region-card">
+                <div class="img">
+                    <img src="/img/bodegas/Viñas.jpg" class="region-img" alt="" srcset="">
+                </div>
+                <div class="name">
+                    <p>Viñas de Segisa</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <section class="wines">
+        <div class="section-header">
+            <h2>Los más populares</h2>
+            <a href="/tienda/vinos"> Ver Más</a>
+        </div>
+
+        <div class="wine-cards-container">
+
+            <% wines.forEach(wine=> {    %>
+                <a href="/wine/<%= wine.nombre_vino %>" class="wine-item">
+                    <div class="img-wine-container">
+                        <img src="/img/product/vinos/<%- wine.url_imagen %>" class="img-wine" alt="botella de vino">
+                    </div>
+                    <div class="wine-name">
+                        <p>
+                            <%- wine.nombre_vino %>
+                        </p>
+                        <p>
+                            <%- wine.nombre_bodega %>
+                        </p>
+                    </div>
+                </a>
+                <%  }) %>
+
+        </div>
+    </section>
+
+
+
+
+</div>

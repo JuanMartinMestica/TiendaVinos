@@ -1,0 +1,40 @@
+.profile-content {
+    min-height: calc(100vh - 104px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.profile-info {
+    width: 100%;
+    min-height: calc(100vh - 336px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.welcome-profile {
+    text-align: center;
+    font-weight: 400;
+}
+
+.profile-title {
+    font-weight: 300;
+    font-size: 24px;
+}
+
+.profile-value-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-value {
+    border: 1px solid #c6c6c6;
+    border-radius: 4px;
+    padding: .6rem 0;
+    margin-left: 2rem;
+    text-align: center;
+    min-width: 20rem;
+}

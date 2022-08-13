@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= typeof title !== 'undefined' ? title: 'ArgenWines' %>
+    </title>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/bodegas.css">
+    <link rel="stylesheet" href="/css/wine.css">
+    <link rel="stylesheet" href="/css/bodega.css">
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/css/profile.css">
+    <link rel="icon" type="image/x-icon" href="/img/favicon/favicon.png">
+</head>
+
+<body>
+
+    <!-- navbar -->
+    <header class="header">
+
+        <nav class="nav">
+            <div class="logo-container">
+                <img src="/img/landing/flag.png" class="img-flag" alt="bandera argentina">
+                <a href="/" class="logo">  ArgenWines</a></div>
+            <ul class="nav-menu">
+                <li class="item search-mobile hide">
+                    <p class="menu-link item-search-mobile"> Busca un vino</p>
+                </li>
+                <li class="item"><a href="/tienda" class="menu-link">Tienda</a></li>
+                <li class="item"><a href="/bodegas" class="menu-link">Bodegas</a></li>
+                <li class="item"><a href="/about" class="menu-link">Nosotros</a></li>
+                <li class="item">
+                    <a href="/submit-vino" class="menu-link"> Tests </a>
+                </li>
+
+            </ul>
+
+            <div class="icons">
+
+                <div class="cart btn-nav">
+                    <i class='bx bx-cart icon'></i>
+                </div>
+
+
+                <div class="signup btn-nav">
+                    <a href="/auth"> <i class='bx bx-user icon'></i> </a>
+
+                </div>
+
+                <div class="search-btn btn-nav">
+                    <i class='bx bx-search-alt-2 icon search-icon'></i>
+                </div>
+
+
+
+            </div>
+
+
+
+
+            <div class="menu-mobile hide">
+                <i class='bx bx-menu'></i>
+                <i class='bx bx-x hide-icon'></i>
+            </div>
+
+        </nav>
+
+
+
+
+
+
+    </header>
+
+    <div class="main-content">
+
+        <!-- LAYOUT -->
+        <%- body -%>
+
+            <div class="overlay-search">
+                <div class="overlay-content">
+                    <form class="input-container" action="/search" method="POST" id="search-input">
+                        <input type="search" name="searchTerm" class="form-control hide-control" autoComplete="off" placeholder="Busca un vino..." aria-label="Search">
+                    </form>
+                    <div class="search-box">
+                    </div>
+                </div>
+                <div class="close-search">
+                    X
+                </div>
+            </div>
+
+
+    </div>
+
+    <a href="https://api.whatsapp.com/send?phone=2944390332&text=%C2%A1Hola!%20" target="_blank" class="whatsapp">
+        <i class='bx bxl-whatsapp whatsapp-icon'></i>
+    </a>
+
+
+</body>
+
+<script src="/js/searchbarAnimation.js"></script>
+<script src="/js/mobileMenu.js"></script>
+
+</html>

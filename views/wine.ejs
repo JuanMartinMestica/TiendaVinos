@@ -1,0 +1,122 @@
+<div class="wine-container">
+    <!-- LEFT COLUMN -->
+    <div class="wine-explore-img-container">
+        <img src="/img/product/vinos/<%=vinoSeleccionado.url_imagen%>" alt="botella de vino " class="wine-img-main">
+    </div>
+    <!-- RIGHT COLUMN -->
+    <div class="wine-description">
+        <div class="wine-desc-container">
+            <h2 class="wine-winery">
+                <%= vinoSeleccionado.nombre_bodega %>
+            </h2>
+            <h1 class="wine-name-title">
+                <%= vinoSeleccionado.nombre_vino%>
+            </h1>
+            <h2 class="wine-winery">
+                $
+                <%= vinoSeleccionado.precio%>
+            </h2>
+            <p class="wine-id">
+                <% if(vinoSeleccionado.stock>0){%>
+                    En stock
+                    <% }else{ %>
+                        Agotado
+                        <%}%>
+
+            </p>
+        </div>
+        <div class="wine-desc-container">
+            <h3 class="wine-subtitle">Notas de cata</h3>
+            <p class="tasting">
+                <%= vinoSeleccionado.notade_cata%>
+            </p>
+        </div>
+
+        <div class="wine-desc-container">
+
+            <h3 class="wine-subtitle">Tipo: <span class="answer"> <%= vinoSeleccionado.tipo%> </span> </h3>
+            <h3 class="wine-subtitle">Cosecha: <span class="answer">   <%= vinoSeleccionado.año_cosecha %> </span></h3>
+            <h3 class="wine-subtitle">Presentación: <span class="answer">   <%= vinoSeleccionado.presentacion %> </span></h3>
+            <h3 class="wine-subtitle">Tiempo de guarda: <span class="answer">  10 años</span></h3>
+
+
+        </div>
+
+        <div class="wine-desc-container last">
+            <button class="button-add-cart">
+                <span class="button-content-cart">Agregar al carrito</span>
+            </button>
+
+            <a href="/bodegas/<%=vinoSeleccionado.nombre_bodega%>">
+                <button class="button-add-cart">
+                    <span class="button-content-cart">
+                        Más de Bodega <%=vinoSeleccionado.nombre_bodega%>
+                    </span>
+                </button>
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="arrow">
+        <p class="more">Conocé más</p>
+        <a href="#section2"><i class='bx bx-chevron-down arrow-item'></i></a>
+    </div>
+
+
+
+
+
+
+</div>
+
+<section class="wine-info" id="section2">
+
+
+    <!--====================================================== MENU ================================ -->
+    <div class="menu">
+        <p class="menu-item selected" data-target="#composicion">Composición</p>
+        <p class="menu-item" data-target="#similares">Similares</p>
+    </div>
+    <!--====================================================== CONTENT 1================================ -->
+    <div data-content id="composicion" class="composition-container active">
+        <div class="title-composition">
+            <h2 class="composition-title-name">
+            </h2>
+            <h2 class="composition-title">
+                Composición
+            </h2>
+        </div>
+        <div class="chart-container">
+            <canvas id="myChart"></canvas>
+        </div>
+    </div>
+
+
+    <!--======================================================== CONTENT 2================================ -->
+    <div data-content id="similares">
+
+
+    </div>
+
+    <div class="wine-waves-container">
+        <div>
+            <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                    <defs>
+                    <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                    </defs>
+                    <g class="parallax">
+                        <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(109,0,0,0.7" />
+                        <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(153,0,0,0.5)" />
+                        <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(88,0,0,0.3)" />
+                        <use xlink:href="#gentle-wave" x="48" y="7" fill="rgba(88,0,0,1)" />
+                    </g>
+                    </svg>
+        </div>
+    </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="/js/draw-chart.js"></script>
+<script src="/js/tabMenu.js" defer></script>

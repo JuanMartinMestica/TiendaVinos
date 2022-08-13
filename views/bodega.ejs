@@ -1,0 +1,50 @@
+<section class="region-header">
+    <div class="header-img" style="background-image: url('/img/bodegas/banner/<%=bodegaSeleccionada.urlBanner%>')">
+        <h1 class="region-name">
+            <%= bodegaSeleccionada.nombrebodega %>
+        </h1>
+    </div>
+    <div class="region-content">
+        <h2 class="region-subtitle"> Sobre
+            <%= bodegaSeleccionada.nombrebodega %>
+
+        </h2>
+        <div class="desc-container">
+            <p class="desc">
+                <i class='bx bxs-quote-left quote'></i>
+                <%= bodegaSeleccionada.descripcion %>
+            </p>
+        </div>
+    </div>
+    <div class="arrow-container">
+        <p>Conocé los vinos</p>
+        <a href="#section2"><i class='bx bx-chevron-down arrow'></i></a>
+    </div>
+</section>
+<section class="region-wines" id="section2">
+    <div class="wines-header">
+        <h3 class="last-wines"> Vinos de la bodega</h1>
+            <a href="">Ver todos</a>
+    </div>
+    <div class="wine-cards-container region-wine-container">
+
+        <% vinosBodega.forEach(wine=> {    %>
+            <a href="/wine/<%= wine.nombre_vino %>" class="wine-item">
+                <div class="img-wine-container">
+                    <img src="/img/product/vinos/<%- wine.url_imagen %>" class="img-wine" alt="botella de vino">
+                </div>
+                <div class="wine-name">
+                    <p>
+                        <%- wine.nombre_vino %>
+                    </p>
+                    <p>
+                        <%- wine.nombre_bodega %>
+                    </p>
+                </div>
+            </a>
+            <%  }) %>
+
+
+    </div>
+
+</section>
